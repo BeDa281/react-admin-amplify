@@ -350,6 +350,16 @@ export class DataProvider {
         resource.charAt(0).toUpperCase() + resource.slice(1)
       }`;
     }
+    const ending = (resource.charAt(resource.length - 3) + resource.charAt(resource.length - 2))
+        console.log(ending);
+        if(ending === "ie") {
+            console.log("ie");
+            return "" + operation + (resource.charAt(0).toUpperCase() + resource.slice(1, -3)+ "y")
+        }
+        if(resource === "Groups") {
+            console.log("ie");
+            return "" + operation + (resource.charAt(0).toUpperCase() + resource.slice(1));
+        }
     // else singular operations ["create", "delete", "get", "update"]
     return `${operation}${
       resource.charAt(0).toUpperCase() + resource.slice(1, -1)
